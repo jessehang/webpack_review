@@ -1,0 +1,26 @@
+{
+  "name": "webpack_review",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessehang/webpack_review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessehang/webpack_review/issues"
+  },
+  "homepage": "https://github.com/jessehang/webpack_review#readme",
+  "devDependencies": {
+    "file-loader": "^4.0.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
