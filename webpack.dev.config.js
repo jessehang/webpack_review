@@ -3,9 +3,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'hello-world': './src/hello-world.js',
+    'cloud': './src/cloud.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './dist'),
     publicPath: ''
   },
@@ -57,9 +60,18 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      filename: 'hello-world.html',
+      chunks: ['hello-world'],
       title: 'Hello World',
-      template: 'src/index.hbs',
-      description: 'Description'
+      description: 'Hello world',
+      template: 'src/page-template.hbs',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'cloud.html',
+      chunks: ['cloud'],
+      title: 'Cloud',
+      description: 'Cloud',
+      template: 'src/page-template.hbs',
     })
   ]
 }
